@@ -1,0 +1,22 @@
+stages:
+  - test
+
+variables:
+  PIP_CACHE_DIR: "$CI_PROJECT_DIR/.cache/pip"
+
+before_script:
+  - python -m venv venv  # Create a new virtual environment
+  - source venv/bin/activate  # Activate the virtual environment
+  - pip install --upgrade pip  # Upgrade pip to the latest version
+  - pip install -r requirements.txt  # Install the dependencies
+
+test:
+  stage: test
+  script:
+    - pytest --junitxml=report.xml  # Run the tests
+  artifacts:
+    reports:
+      junit: report.xml  # Save the test report
+    paths:
+      - .cache/pip  # Cache pip dependencies for faster builds
+    expire_in: 1 week  # Set the expiration time for the artifacts
