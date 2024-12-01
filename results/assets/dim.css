@@ -1,0 +1,75 @@
+/* dark_mode.css */
+
+/* General background and text color */
+body {
+    background-color: #121212;  /* Dark background */
+    color: white;  /* White text color */
+}
+
+/* Make sure all headings (h1, h2, h3, etc.) have white text */
+h1, h2, h3, h4, h5, h6 {
+    color: white;
+}
+
+/* Links (a) */
+a {
+    color: #8ab4f8;  /* Light blue links */
+}
+a:hover {
+    color: #bb86fc;  /* Lighter color on hover */
+}
+
+/* Table headers and table data */
+.table th, .table td {
+    color: white;  /* White text for table cells */
+    border: 1px solid #333;  /* Border color for better contrast */
+}
+
+/* Navbar and footer */
+.navbar, .footer {
+    background-color: #333;  /* Darker navbar/footer background */
+    color: white;  /* White text for navbar/footer */
+}
+
+/* Status (Passed, Failed, Skipped) */
+.status-passed {
+    background-color: #4CAF50;  /* Green for passed tests */
+    color: white;  /* White text */
+}
+.status-failed {
+    background-color: #F44336;  /* Red for failed tests */
+    color: white;  /* White text */
+}
+.status-skipped {
+    background-color: #FF9800;  /* Orange for skipped tests */
+    color: white;  /* White text */
+}
+
+/* Code blocks and preformatted text */
+pre, code {
+    background-color: #333;  /* Dark background for code */
+    color: #e0e0e0;  /* Light text for code */
+}
+
+/* Ensure all other text, like error messages and logs, is white */
+.error, .log {
+    color: white;  /* White text for error logs and other messages */
+}
+
+/* Adjust button text color (for any buttons in the report) */
+button {
+    color: white;  /* White text on buttons */
+}
+
+/* Ensure the footer is dark with white text */
+footer {
+    color: white;
+    background-color: #121212;
+}
+
+/* For the passed/failed/skipped status boxes */
+div.status-passed,
+div.status-failed,
+div.status-skipped {
+    color: white;  /* White text */
+}

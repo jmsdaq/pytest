@@ -1,5 +1,3 @@
-# app/shopping_cart.py
-
 class ShoppingCart:
     def __init__(self):
         self.items = {}
